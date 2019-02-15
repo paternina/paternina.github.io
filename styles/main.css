@@ -1,0 +1,51 @@
+/* background */		
+/*.hero {*/
+/*	background: black url(images/hero-1.jpg) center / cover;*/
+/*}*/
+
+/*@media (max-width: 1024px) { .hero { background: black url(images/hero-2.jpg) center / cover; } }*/
+/*@media (max-width:  768px) { .hero { background: black url(images/hero-3.jpg) center / cover; } }*/
+
+.center, .center-column, .top,
+.right, .bottom, .left, .m-footer,
+.social{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.social a {
+    margin-left: 1rem;
+}
+
+.center-column {
+    flex-direction: column;
+}
+
+.top    { align-items:     flex-start; }
+.right  { justify-content: flex-end;   }
+.bottom { align-items:     flex-end;   }
+.left   { justify-content: flex-start; }
+
+.single-spaced, .single-spaced * {
+    line-height: 1;
+}
+
+@media (max-width: 1024px) {
+	.desktop {
+		display: none;
+	}
+}
+
+@media (max-width: 768px) {
+    :root {
+		font-size: 90%;
+	}
+    .m-footer, .copy {
+        display:block;
+        text-align: center;
+    }
+    .social {
+        justify-content: center;
+    }
+}
