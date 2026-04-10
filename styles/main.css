@@ -1,77 +1,142 @@
-/* background */
-/*.hero {*/
-/*	background: black url(images/hero-1.jpg) center / cover;*/
-/*}*/
+/* =====================
+   Base
+   ===================== */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
 
-/*@media (max-width: 1024px) { .hero { background: black url(images/hero-2.jpg) center / cover; } }*/
-/*@media (max-width:  768px) { .hero { background: black url(images/hero-3.jpg) center / cover; } }*/
+body {
+    font-family: BlinkMacSystemFont, -apple-system, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    color: #363636;
+    line-height: 1.25;
+}
 
-.center,
-.center-column,
-.top,
-.right,
-.bottom,
-.left,
-.m-footer,
-.social {
+/* =====================
+   Utilities
+   ===================== */
+.rp-uppercase {
+    text-transform: uppercase;
+    font-weight: 700 !important;
+}
+
+/* =====================
+   Hero (full-height layout)
+   ===================== */
+.rp-hero {
     display: flex;
-    justify-content: center;
+    flex-direction: column;
+    min-height: 100dvh;
+}
+
+/* =====================
+   Nav
+   ===================== */
+.rp-nav {
+    padding: 0.75rem;
+    font-size: 11px;
+}
+
+.rp-nav-inner {
+    display: flex;
     align-items: center;
 }
 
-.social a {
-    margin-left: 1rem;
+.rp-nav-left {
+    flex: 1;
+    letter-spacing: 1px;
 }
 
-.center-column {
-    flex-direction: column;
+.rp-nav-center {
+    flex: 1;
+    text-align: center;
 }
 
-.top {
-    align-items: flex-start;
-}
-
-.right {
+.rp-nav-right {
+    flex: 1;
+    display: flex;
     justify-content: flex-end;
 }
 
-.bottom {
-    align-items: flex-end;
+.rp-bold {
+    font-weight: 700;
 }
 
-.left {
-    justify-content: flex-start;
-}
-
-.hero-center {
+/* =====================
+   Hero body (centered content)
+   ===================== */
+.rp-hero-body {
+    flex: 1;
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
-.single-spaced,
-.single-spaced * {
+.rp-hero-content {
+    text-align: center;
     line-height: 1;
 }
 
+.rp-subtitle {
+    font-size: 1.25rem;
+    font-weight: 300;
+    margin-bottom: 0.5rem;
+}
+
+.rp-title {
+    font-size: 3rem;
+    font-weight: 700;
+    color: #0a0a0a;
+}
+
+/* =====================
+   Footer
+   ===================== */
+.rp-footer {
+    padding: 2rem;
+}
+
+.rp-footer-inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.rp-social {
+    display: flex;
+    gap: 2.5rem;
+    align-items: center;
+}
+
+.rp-social a {
+    color: inherit;
+    display: flex;
+}
+
+.rp-social a:hover {
+    opacity: 0.6;
+}
+
+/* =====================
+   Utilities
+   ===================== */
 @media (max-width: 1024px) {
-    .desktop {
+    .rp-desktop {
         display: none;
     }
 }
 
 @media (max-width: 768px) {
-    :root {
-        font-size: 90%;
+    .rp-title {
+        font-size: 2rem;
     }
 
-    .m-footer,
-    .copy {
-        display: block;
+    .rp-footer-inner {
+        flex-direction: column;
+        gap: 1rem;
         text-align: center;
-    }
-
-    .social {
-        justify-content: center;
     }
 }
